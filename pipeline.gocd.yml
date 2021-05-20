@@ -5,6 +5,9 @@ pipelines:
     group: test
     label_template: "${COUNT}-${git[:7]}"
     enable_vault: true
+    environment_variables:
+      ROLE_ID: '{{SECRET:[vault][test1]}}'
+      SECRET_ID: '{{SECRET:[vault][test2]}}'
     materials:
       git:
         git: git@github.com:anrock-sc/repo-test.git
