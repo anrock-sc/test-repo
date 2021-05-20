@@ -4,6 +4,7 @@ pipelines:
   pipeline-test:
     group: test
     label_template: "${COUNT}-${git[:7]}"
+    enable_vault: true
     materials:
       git:
         git: git@github.com:anrock-sc/repo-test.git
