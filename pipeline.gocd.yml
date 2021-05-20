@@ -7,10 +7,10 @@ pipelines:
     materials:
       git:
         git: git@github.com:anrock-sc/repo-test.git
-  stages:
-    - build:
-        jobs:
-          build:
-            tasks:
-             - exec:
-                 command: make
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+               - exec:
+                   command: make
