@@ -4,7 +4,6 @@ pipelines:
   pipeline-test:
     group: test
     label_template: "${COUNT}-${git[:7]}"
-    enable_vault: true
     environment_variables:
       ROLE_ID: '{{SECRET:[vault][test1]}}'
       SECRET_ID: '{{SECRET:[vault][test2]}}'
